@@ -12,11 +12,21 @@ public class MyWorld extends World
         
         Apple apple = new Apple();
         addObject(apple, 300, 0); 
+        
+        createApple();
     }
     
     public void gameOverCode() 
     {
         Label gameOverLabel = new Label ("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
+    }
+    
+    public void createApple()
+    {
+        Apple apple = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = Greenfoot.getRandomNumber(300);
+        addObject(apple, x, y); 
     }
 }
