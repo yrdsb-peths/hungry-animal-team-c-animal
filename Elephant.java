@@ -15,9 +15,7 @@ public class Elephant extends Actor
     //Direction elephant is facing
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
-    /**
-     * Constructor - the code that runs once when object is created
-     */
+
     public Elephant()
     {
         for(int i = 0; i < 8; i++)
@@ -69,11 +67,19 @@ public class Elephant extends Actor
         {
             move(-5);
             facing = "left";
+            
         }
         else if(Greenfoot.isKeyDown("right"))
         {
             move(5);
             facing = "right";
+            
+        }
+        if(getX()>600){
+            setLocation(600,getY());
+        }
+        if(getX()<0){
+            setLocation(0,getY());
         }
         //removes apple when touches elepahant
         eat();
