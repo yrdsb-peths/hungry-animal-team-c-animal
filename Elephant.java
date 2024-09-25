@@ -18,9 +18,7 @@ public class Elephant extends Actor
     String facing = "right";
     Boolean isMoving = false;
     SimpleTimer animationTimer = new SimpleTimer();
-    /**
-     * Constructor - the code that runs once when object is created
-     */
+
     public Elephant()
     {
         for(int i = 0; i < 8; i++)
@@ -122,6 +120,13 @@ public class Elephant extends Actor
                 isMoving = false;
                 imageIndex = 0;
             }
+            
+        }
+        if(getX()>600){
+            setLocation(600,getY());
+        }
+        if(getX()<0){
+            setLocation(0,getY());
         }
         //removes apple when touches elepahant
         eat();

@@ -3,7 +3,6 @@ comment0.target=Elephant
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Elephant\ here.\r\n\ This\ is\ a\ elephant\ that\ will\ act\ as\ the\ main\ character\r\n\ \r\n\ @author\ Henry\r\n\ @version\ Sep\ 24,\ 2024\r\n
 comment1.params=
 comment1.target=Elephant()
-comment1.text=\r\n\ Constructor\ -\ the\ code\ that\ runs\ once\ when\ object\ is\ created\r\n
 comment2.params=
 comment2.target=void\ animateElephant()
 comment3.params=
