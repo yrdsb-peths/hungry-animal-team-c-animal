@@ -3,5 +3,5 @@ This Hungry Animal Game includes modifications as stated below:
 ## New Subclass: Rotten Apple
 If the elephant collides with/eats the green rotten apple, the game will be over
 ## Abtract Class: Food
-Provides the subclasses "Apple" and "Rotten Apple" with its speed, how to remove/destroy itself and spawns the object in a random location at the top of the screen
+Provides the subclasses "Apple" and "Rotten Apple" with its speed, how to remove/destroy itself and spawns the object at a random location
 ## Interface: Clickable
