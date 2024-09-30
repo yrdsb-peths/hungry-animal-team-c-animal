@@ -7,9 +7,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Henry
  * @version Sep 24, 2024
  */
-public class Elephant extends Actor
+public class Elephant extends Actor implements Clickable
 {
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
+    GreenfootSound elephantShout = new GreenfootSound("elephantshout.mp3");
     GreenfootImage[] idleRight = new GreenfootImage[8];
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     GreenfootImage[] walkRight = new GreenfootImage[13];
@@ -132,6 +133,8 @@ public class Elephant extends Actor
         eat();
         //Animates elephant
         animateElephant();
+        //Makes sound when elephant is clicked
+        makeSound();
     }
     
     int i;
@@ -155,6 +158,14 @@ public class Elephant extends Actor
             }
             world.increaseScore();
             elephantSound.play();
+        }
+    }
+    
+    public void makeSound()
+    {
+        if(Greenfoot.mouseClicked(this))
+        {
+            elephantShout.play();
         }
     }
 }
