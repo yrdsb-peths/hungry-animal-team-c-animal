@@ -1,5 +1,5 @@
 # Hungry Animal Team C 
-This game includes modifications as stated below:
+This Hungry Animal Game includes modifications as stated below:
 ## New Subclass: Rotten Apple
 If the elephant collides with the green rotten apple, the game over screen is displayed
 ## Abtract Class: Food
