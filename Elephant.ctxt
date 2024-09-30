@@ -10,5 +10,4 @@ comment3.target=void\ act()
 comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Elephant\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment4.params=
 comment4.target=void\ eat()
-comment4.text=\r\n\ Eats\ apple\ and\ creates\ a\ new\ one.\ Also\ increases\ score\ when\ eats\ apple.\r\n
 numComments=5

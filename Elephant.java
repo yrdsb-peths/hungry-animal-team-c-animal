@@ -134,16 +134,25 @@ public class Elephant extends Actor
         animateElephant();
     }
     
-    /**
-     * Eats apple and creates a new one. Also increases score when eats apple.
-     */
+    int i;
     public void eat()
     {
+        if(isTouching(RottenApple.class))
+        {
+            MyWorld world=(MyWorld) getWorld();
+            removeTouching(RottenApple.class);
+            world.gameOverCode();
+        }
         if(isTouching(Apple.class))
         {
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
-            world.createApple();
+            i=Greenfoot.getRandomNumber(3);
+            if(i==2){
+                world.createRottenApple();
+            }else{
+                world.createApple();
+            }
             world.increaseScore();
             elephantSound.play();
         }
