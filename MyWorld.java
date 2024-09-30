@@ -40,4 +40,12 @@ public class MyWorld extends World
         int y = Greenfoot.getRandomNumber(1);
         addObject(apple, x, y); 
     }
+    public void createRottenApple()
+    {
+        RottenApple rottenApple = new RottenApple();
+        rottenApple.setSpeed(level);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = Greenfoot.getRandomNumber(1);
+        addObject(rottenApple, x, y); 
+    }
 }
