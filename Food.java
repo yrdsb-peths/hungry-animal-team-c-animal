@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Food extends Actor
+public abstract class Food extends Actor implements Clickable
 {
     private int speed;
     public Food(int speed){
@@ -18,6 +18,7 @@ public class Food extends Actor
         int y = getY()+speed;
         setLocation(x, y);
         remove();
+        makeSound();
     }
     public void remove(){
         MyWorld world= (MyWorld) getWorld();
@@ -26,8 +27,8 @@ public class Food extends Actor
             world.removeObject(this);
         }
     }
-        public int setSpeed(int spd){
-            return speed=spd;
-        }
+    public int setSpeed(int spd){
+        return speed=spd;
     }
+}
 

@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class RottenApple extends Food
 {
+    GreenfootSound gaggingSound = new GreenfootSound("gagging.mp3");
     public RottenApple(){
         super(2);
             
@@ -17,14 +18,15 @@ public class RottenApple extends Food
         MyWorld world= (MyWorld) getWorld();
         if(getY()>=world.getHeight()){
             world.removeObject(this);
-            i=Greenfoot.getRandomNumber(3);
-            if(i==2){
-                world.createRottenApple();
-            }else{
-                world.createApple();
-            }
-            
+            world.createApple();
         }
     }
     
+    public void makeSound()
+    {
+        if(Greenfoot.mouseClicked(this))
+        {
+            gaggingSound.play();
+        }
+    }
 }
