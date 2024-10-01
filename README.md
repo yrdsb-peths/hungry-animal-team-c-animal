@@ -1,7 +1,7 @@
 # Hungry Animal Team C 
 This Hungry Animal Game includes modifications as stated below:
 ## New Subclass: Rotten Apple
-If the elephant collides with/eats the green rotten apple, the game will be over
+If the elephant collides with/eats the green rotten apple, the game will be over.
 ## Abstract Class: Food
 Provides the subclasses "Apple" and "Rotten Apple" with the speed, how to remove/destroy itself and spawns the object at a random location. An instance of food should never be created in our code, and it should only be used to generalize all of its subclassses which is why it makes sense to make it an abstract class.
 ## Interface: Clickable
