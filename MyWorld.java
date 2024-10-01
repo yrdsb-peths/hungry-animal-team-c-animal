@@ -34,18 +34,16 @@ public class MyWorld extends World
     }
     public void createApple()
     {
-        Apple apple = new Apple();
+        Food apple;
+        int i=Greenfoot.getRandomNumber(3);
+        if(i==2){
+            apple = new RottenApple();
+        }else{
+            apple = new Apple();
+        }
         apple.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600);
         int y = Greenfoot.getRandomNumber(1);
         addObject(apple, x, y); 
-    }
-    public void createRottenApple()
-    {
-        RottenApple rottenApple = new RottenApple();
-        rottenApple.setSpeed(level);
-        int x = Greenfoot.getRandomNumber(600);
-        int y = Greenfoot.getRandomNumber(1);
-        addObject(rottenApple, x, y); 
     }
 }

@@ -150,12 +150,7 @@ public class Elephant extends Actor implements Clickable
         {
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
-            i=Greenfoot.getRandomNumber(3);
-            if(i==2){
-                world.createRottenApple();
-            }else{
-                world.createApple();
-            }
+            world.createApple();
             world.increaseScore();
             elephantSound.play();
         }
